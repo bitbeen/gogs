@@ -387,6 +387,8 @@ func Init(customConf string) error {
 		return errors.Wrap(err, "mapping [prometheus] section")
 	} else if err = File.Section("other").MapTo(&Other); err != nil {
 		return errors.Wrap(err, "mapping [other] section")
+	} else if err = File.Section("experimental").MapTo(&Experimental); err != nil {
+		return errors.Wrap(err, "mapping [experimental] section")
 	}
 
 	HasRobotsTxt = osutil.IsFile(filepath.Join(CustomDir(), "robots.txt"))

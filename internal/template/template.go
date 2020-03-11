@@ -130,6 +130,9 @@ func FuncMap() []template.FuncMap {
 				return "tab-size-8"
 			},
 			"InferSubmoduleURL": gitutil.InferSubmoduleURL,
+			"Experimental": func() interface{} {
+				return conf.Experimental
+			},
 		}}
 	})
 	return funcMap

@@ -83,6 +83,7 @@ func newMacaron() *macaron.Macaron {
 	if !conf.Server.LoadAssetsFromDisk {
 		publicFs = public.NewFileSystem()
 	}
+	fmt.Println(12321321, conf.Experimental.FomanticUI)
 	m.Use(macaron.Static(
 		filepath.Join(conf.WorkDir(), "public"),
 		macaron.StaticOptions{

@@ -405,6 +405,11 @@ var (
 		ShowFooterTemplateLoadTime bool
 	}
 
+	// Experimental settings
+	Experimental struct {
+		FomanticUI bool `ini:"FOMANTIC_UI"`
+	}
+
 	// Global setting
 	HasRobotsTxt bool
 )
